@@ -1,26 +1,70 @@
 # Build4SDG 2023
-## Python django Advance challenge
+## Python django intermediate challenge
 
-### Task
-**Create a simple todo-list application with the following features:**
-* Users can add, edit and delete tasks.
-* Tasks should have a title and a description.
-* Users can mark tasks as completed.
-* Users can set a due date and time for a task.
-* Users can filter tasks based on their status (completed, uncompleted) and due date.
+# Task: Django Task API
+This project is a simple ExpressJS task API that allows users to create, retrieve, update, and delete tasks. The API is built using ExpressJS and MongoDB for data storage.
 
-### Endpoints
-* POST /tasks - Create a new task
-* GET /tasks - Retrieve a list of all tasks
-* GET /tasks?status=completed - Filter tasks by status (completed)
-* GET /tasks?status=uncompleted - Filter tasks by status (uncompleted)
-* GET /tasks?due_date={date} - Filter tasks by due date
-* GET /tasks/{task_id} - Retrieve a single task
-* PUT /tasks/{task_id} - Update a task
-* DELETE /tasks/{task_id} - Delete a task
-* PUT /tasks/{task_id}/complete - Mark a task as completed
+## Expectations
+## TASK 1
+The project is expected to have the following API endpoints:
 
-**_You should map these endpoints to the task_list, task_detail, and task_complete views, respectively._**
+- Retrieve all tasks (GET _/api/tasks_)
+- Create a task (POST _/api/tasks_)
+- Retrieve a single task (GET _/api/tasks/:id_)
+- Update a task (PATCH _/api/tasks/:id_)
+- Delete a task (DELETE _/api/tasks/:id_)
+- Mark task as completed (PATCH _/api/tasks/:id/completed_)
+
+**Note** - Only for the more experienced developer
+- Update the (GET _/api/tasks_) to allow user filter task either by dueDate, status or title. 
+
+## TASK 2
+ Complete the two question in the `django/SDG23/solve.py`. The `getMaxSum` and `uniqueChars` function
+## Question 1 - getMaxSum
+Write a function called `getMaxSum` that takes an array of integers as input and returns the maximum sum of any contiguous subarray of the given array. If the array is empty or contains only negative integers, the function should return 0. 
+ The getMaxSum function takes an array of integers as input and returns the maximum sum of any contiguous subarray of the given array. If the array is empty or contains only negative integers, the function should return 0.
+
+ ### Example Input and Output
+ **Example 1**
+ 
+ Input
+```python
+ getMaxSum([1, -3, 2, 1, -1]);
+```
+
+output
+```python
+ 3
+```
+
+## Question 2 - uniqueChars
+Complete the `uniqueChars` that takes a _string_ as input and returns a new string containing only the unique characters in the input string, in the order that they first appear. If the input string is empty or contains only whitespaces, the function should return an empty string.
+
+// For example, if the input string is "hello world", the function should return "helo wrd".
+
+ ### Example Input and Output
+ **Example 1**
+ 
+ Input
+```python
+ uniqueChars("hello world");
+```
+
+output
+```python
+ "helo wrd"
+```
+**Example 2**
+ 
+ Input
+```python
+ uniqueChars("");
+```
+
+output
+```python
+ ""
+```
 
 **_NOTE:_**
 * project directory - **django/SDG23**
@@ -28,3 +72,9 @@
 * virtual environment - **django/.venv**
 
 **Best of LUCK!!!, ENJOY!!!**
+
+## Contributors
+
+
+License
+NIL
