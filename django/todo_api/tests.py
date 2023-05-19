@@ -31,7 +31,7 @@ class TaskTest(TestCase):
 
     def test_update_task(self):
         updated_task = {'title': 'Finish the project', 'description': 'Complete all the remaining tasks', 'due_date': self.due_date}
-        response = self.client.put(reverse('task_detail', kwargs={'task_id': self.task_id}), updated_task, format='json')
+        response = self.client.patch(reverse('task_detail', kwargs={'task_id': self.task_id}), updated_task, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_delete_task(self):
@@ -39,7 +39,7 @@ class TaskTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
     def test_mark_task_as_complete(self):
-        response = self.client.put(reverse('task_complete', kwargs={'task_id': self.task_id}), format='json')
+        response = self.client.patch(reverse('task_complete', kwargs={'task_id': self.task_id}), format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_filter_completed_tasks(self):
